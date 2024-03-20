@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/vickypandey14/Gemini-PHP/main/public/images/final_keyword_header.width-1200.png">
+
 # Gemini API Integration in PHP
 
 ### This repository contains a PHP application that integrates with the Gemini API for generating content based on user prompts.
@@ -33,7 +35,7 @@ Contributions are welcome! Feel free to fork the repository and submit pull requ
 This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
 
 ## Author
-[Vicky Pandey](https://github.com/vickypandey14)
+[Vivek Pandey](https://github.com/vickypandey14)
 
 For any questions or support, please open an issue on GitHub: [Gemini-PHP Issues](https://github.com/vickypandey14/Gemini-PHP/issues)
 
