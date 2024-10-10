@@ -28,6 +28,12 @@
 4. Click on the "Generate Response" button.
 5. View the generated response.
 
+## API
+A new folder named `api` has been added, containing the `get-response.php` file. This file is responsible for handling requests to the Gemini API, generating responses based on user input. To use this API:
+
+1. Ensure the Gemini API key is set in `get-response.php`.
+2. Send a POST request with a JSON body containing the `text` field to receive a generated response.
+
 ## Contributing
 Contributions are welcome! Feel free to fork the repository and submit pull requests with improvements, bug fixes, or new features.
 
