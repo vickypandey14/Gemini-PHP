@@ -22,7 +22,7 @@
    ```
 
 ## Usage
-1. Configure your Gemini API key in `response.php`.
+1. Configure your Gemini API key in `response.php` (or `api/get-response.php` if using the API endpoint).
 2. Open `index.php` in a web browser.
 3. Enter a prompt in the input field.
 4. Click on the "Generate Response" button.
