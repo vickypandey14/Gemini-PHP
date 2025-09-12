@@ -1,13 +1,12 @@
 <?php
 
 // Allow CORS requests from any origin (or specify a domain instead of *)
-
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 header('Content-Type: application/json');
 
-if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;
 }
@@ -20,22 +19,32 @@ use GeminiAPI\Resources\Parts\TextPart;
 $data = json_decode(file_get_contents("php://input"));
 
 if (!$data || empty($data->text)) {
-    echo json_encode(['error' => 'No prompt provided']);
     http_response_code(400);
+    echo json_encode(['error' => 'No prompt provided']);
     exit;
 }
 
-$text = $data->text;
+$text = trim($data->text);
 
-$client = new Client("YOUR_GEMINI_API_KEY_HERE");
+// Initialize Gemini client
+$apiKey = getenv('GEMINI_API_KEY') ?: "YOUR_GEMINI_API_KEY_HERE";
+$client = new Client($apiKey);
+
+// Choose latest model
+$modelName = 'gemini-2.0-flash';
 
 try {
-    $response = $client->geminiPro()->generateContent(
-        new TextPart($text)
-    );
-    
-    echo json_encode(['response' => $response->text()]);
+    $response = $client
+        ->generativeModel($modelName)
+        ->generateContent(new TextPart($text));
+
+    echo json_encode([
+        'response' => $response->text()
+    ]);
 } catch (Exception $e) {
-    echo json_encode(['error' => 'API call failed: ' . $e->getMessage()]);
     http_response_code(500);
+    echo json_encode([
+        'error' => 'API call failed',
+        'message' => $e->getMessage()
+    ]);
 }

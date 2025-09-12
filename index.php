@@ -42,7 +42,7 @@
         <footer class="py-5">
 
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> ByteWebster. All rights reserved.</p>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Vivek Chandra Pandey. All rights reserved.</p>
             <ul class="list-unstyled d-flex">
                 
             </ul>
