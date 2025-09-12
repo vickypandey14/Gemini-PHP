@@ -41,7 +41,7 @@ Contributions are welcome! Feel free to fork the repository and submit pull requ
 This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
 
 ## Author
-[Vivek Chandra Pandey](https://github.com/vickypandey14)
+[Vivek Chandra Pandey (Vicky)](https://github.com/vickypandey14)
 
 For any questions or support, please open an issue on GitHub: [Gemini-PHP Issues](https://github.com/vickypandey14/Gemini-PHP/issues)
 
